@@ -7,7 +7,6 @@ const call = require("./helpers/call");
 const config = require("./config");
 const updateOperations = require("./helpers/serializer").updateOperations;
 const bf = require("buffer/").Buffer;
-console.log(bf);
 global.Buffer = bf;
 /** Transaction for Steem blockchain */
 class Transaction {

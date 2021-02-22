@@ -34,7 +34,6 @@ const transactionDigest = (transaction, chainId = CHAIN_ID) => {
     ByteBuffer.LITTLE_ENDIAN
   );
   try {
-    console.log(buffer, transaction);
     serializer.Transaction(buffer, transaction);
   } catch (cause) {
     throw new Error({ cause, transaction, buffer });

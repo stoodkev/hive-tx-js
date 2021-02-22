@@ -18,13 +18,7 @@ const createTransaction = async (operations, exp) => {
     .toISOString()
     .slice(0, -5);
   const extensions = [];
-  console.log({
-    expiration,
-    extensions,
-    operations,
-    ref_block_num: refBlockNum,
-    ref_block_prefix: refBlockPrefix
-  });
+
   return {
     expiration,
     extensions,

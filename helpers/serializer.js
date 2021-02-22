@@ -127,14 +127,10 @@ const ArraySerializer = itemSerializer => {
 
 const ObjectSerializer = keySerializers => {
   return (buffer, data) => {
-    console.log("object serializer");
-
     for (const [key, serializer] of keySerializers) {
       try {
-        console.log("serialize", key);
         serializer(buffer, data[key]);
       } catch (error) {
-        console.log(error);
         error.message = `${key}: ${error.message}`;
         throw error;
       }
